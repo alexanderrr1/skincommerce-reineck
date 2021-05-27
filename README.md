@@ -1,11 +1,17 @@
 # Desafio 1
 
-Crear la app utilizando el CLI.
+Menu E-Commerce
 
 ## Formato
 
-Link al repositorio de github con tu app creada con CRA.
+Link al ultimo commit de tu repositorio en Github.
 
 ## Consigna
 
-Crea una aplicacion utilizando el CLI con el nombre de tu tienda y ejectura los comandos necesarios para instalar React, configurarlo y visualizarlo en tu navegador.
+En el directorio de tu proyecto, crea una carpeta dentro de src llamada components que contenga a NavBar.js para crear una barra de menu simple.
+
+## Aspectos a incluir en el entregable:
+Crea una carpeta dentro de src llamada components que contenga a NavBar.js para crear una barra de menu simple, que tenga:
+* Brand (titulo/nombre de la tienda).
+* Un listado de categorias clickeables (p).
+* Incorpora alguna libreria de estilos con bootstrap/materialize u otro de tu preferencia (opcional).
