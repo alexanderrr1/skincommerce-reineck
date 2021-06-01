@@ -1,17 +1,17 @@
-# Desafio 2
+# Desafio 3
 
-Menu E-Commerce
+Crea tu landing
 
 ## Formato
 
-Link al ultimo commit de tu repositorio en Github.
+Link al ultimo commit en Github.
 
 ## Consigna
 
-En el directorio de tu proyecto, crea una carpeta dentro de src llamada components que contenga a NavBar.js para crear una barra de menu simple.
+* Crear componente CartWidget.js con un ícono y ubicarlo en el Navbar. Agregar algunos estilos con bootstrap/materialize u otro.
+* Crear componente contenedor ItemListContainer.js con una prop greeting y mostrar el mensaje dentro del contenedor con el styling integrado.
 
 ## Aspectos a incluir en el entregable:
-Crea una carpeta dentro de src llamada components que contenga a NavBar.js para crear una barra de menu simple, que tenga:
-* Brand (titulo/nombre de la tienda).
-* Un listado de categorias clickeables (p).
-* Incorpora alguna libreria de estilos con bootstrap/materialize u otro de tu preferencia (opcional).
+
+* Parte 1: Crea un componente CartWidget.js que haga rendering de un icono Cart e inclúyelo dentro de NavBar.js para que esté visible en todo momento.
+* Parte 2: Crea un componente ItemListContainer. Impórtalo dentro de App.js y abajo de NavBar.js.
