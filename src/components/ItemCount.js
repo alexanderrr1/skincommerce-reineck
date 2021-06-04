@@ -43,7 +43,7 @@ export const ItemCount = ({stock, initial, onAdd}) => {
 
                 <div className="row">
                     <div className="d-grid gap-2 mb-2">
-                        <button className="btn btn-outline-danger" type="button" onClick={() => onAdd({contador})}>Agregar al carrito</button>
+                        <button className="btn btn-outline-danger" type="button" onClick={() => onAdd(contador)}>Agregar al carrito</button>
                     </div>
                 </div>
 
