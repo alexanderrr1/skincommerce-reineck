@@ -10,6 +10,7 @@ export const NavBar = () => {
         <div className="container-fluid">
           <a className="navbar-brand" href="/#">
             <img 
+              alt="SkinCommerce"
               src={skinCommerceLogo}
               height='15%'
               width='15%'
