@@ -8,7 +8,7 @@ export const Item = ({ id, title, description, price, pictureUrl}) => {
 
     return (
 
-        <div className="col">
+        <div className="col animate__animated animate__fadeIn">
             <div className="card border-dark" style={cardStyle}>
                 <img className="m-3" alt={description} src={`${process.env.PUBLIC_URL}${pictureUrl}`}/>
                 <div className="card-body">
