@@ -1,17 +1,31 @@
-# Desafio 5
+# Desafio 6A
 
-Catálogo con maps y promises.
+Detalle de producto -A
 
 ## Formato
 
-Link al ultimo commit de tu repositorio en Github.
+Link al último commit de tu repositorio en Github.
 
 ## Consigna
 
-* Crea los componentes Item.js e ItemList.js para mostrar algunos productos en tu ItemListContainer.js. Los ítems deben provenir de un llamado a una Promise que los resuelva en tiempo diferido (setTimeout) de 2 segs para emular retrasos de red. 
+* Crea tu componente ItemDetailContainer con la misma premisa que ItemListContainer
 
 ## Aspectos a incluir en el entregable:
 
-* Item.js: Es un componente destinado a mostrar información breve del producto que el user clickeará luego para acceder a los detalles (lo desarrollaremos más adelante).
-* ItemList.js: Es un agrupador de un set de componentes Item.js (Deberías incluirlo dentro de ItemListContauner del desafío 3).
-* Implementa un async mock (promise): Usa un efecto de montaje para poder emitir un llamado asincrónico a un mock estático de datos que devuelva un conjunto de item { id, title, description, price, pictureURL} en dos segundos, para emular retrasos de red.
+* Al iniciar utilizando un efecto de montaje, debe llamar a un async mock (promise) que en 2 segundos le devuelva un (1) ítem y lo guarde en un estado propio.
+
+# Desafio 6BS
+
+Detalle de producto -B
+
+## Formato
+
+Link al último commit de tu repositorio en Github.
+
+## Consigna
+
+* Crea tu componente ItemDetail.js
+
+## Aspectos a incluir en el entregable:
+
+* ItemDetail.js, que debe mostar la vista de detalle de un ítem incluyendo su descripción, una foto y el precio.
