@@ -14,7 +14,7 @@ Link al último commit de tu repositorio en Github.
 
 * Al iniciar utilizando un efecto de montaje, debe llamar a un async mock (promise) que en 2 segundos le devuelva un (1) ítem y lo guarde en un estado propio.
 
-# Desafio 6BS
+# Desafio 6B
 
 Detalle de producto -B
 
