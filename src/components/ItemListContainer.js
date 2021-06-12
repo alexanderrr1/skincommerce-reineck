@@ -20,7 +20,6 @@ const productList = [
 ];
 
 const productListPromise = new Promise((resolve, reject) => {
-    console.log('Esperando 2 segundos');
     setTimeout(function() {
       resolve(productList);
     }, 2000);
