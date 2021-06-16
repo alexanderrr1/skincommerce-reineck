@@ -1,5 +1,7 @@
-import React from 'react'
-import { Item } from './Item'
+import React from 'react';
+import { Item } from './Item';
+import { NavLink } from 'react-router-dom';
+import './ItemList.css'
 
 export const ItemList = ({ productos }) => {
 
@@ -10,13 +12,16 @@ export const ItemList = ({ productos }) => {
 
             {
                 productos.data.map(x => (
-                    <Item 
-                        key = { x.id }
-                        title = { x.title }
-                        description = { x.description }
-                        price = { x.price }
-                        pictureUrl = { x.pictureUrl }
-                    />
+                    <NavLink className="" exact to={`/item/${x.id}`}>
+                        <Item 
+                            key = { x.id }
+                            title = { x.title }
+                            description = { x.description }
+                            price = { x.price }
+                            pictureUrl = { x.pictureUrl }
+                        />
+                    </NavLink>
+
                 ))
             }
         </div>

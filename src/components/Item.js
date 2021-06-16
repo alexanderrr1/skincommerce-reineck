@@ -1,15 +1,12 @@
 import React from 'react';
+import './Item.css'
 
 export const Item = ({ id, title, description, price, pictureUrl}) => {
-
-    const cardStyle = {
-        background: 'linear-gradient(to right bottom, #D9104D 5%, #ffffff 95%)'
-    }
 
     return (
 
         <div className="col animate__animated animate__fadeIn">
-            <div className="card border-dark" style={cardStyle}>
+            <div className="card border-dark myCard">
                 <img className="m-3" alt={description} src={`${process.env.PUBLIC_URL}${pictureUrl}`}/>
                 <div className="card-body">
                     <h5 className="card-title">{ title }</h5>
