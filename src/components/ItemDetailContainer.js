@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
+import { productList } from '../data/productList';
 import { ItemDetail } from './ItemDetail';
-
-const itemToDetail = {
-        id: '2',
-        title: 'AWP',
-        description: 'Oni Taiji',
-        price: 13225,
-        pictureURL: '/assets/images/awp-oni_taiji.png'       
-}
 
 const itemToDetailPromise = new Promise((resolve, reject) => {
     setTimeout(function() {
-        resolve(itemToDetail);
+        resolve(productList);
     }, 2000);
 });
 
 export const ItemDetailContainer = () => {
+
+    const { id } = useParams();
+
+    const getProductById = ( id ) => {
+        return productList.find( product => product.id === id );
+    }
 
     const[item, setItem] = useState({
         data: {},
@@ -23,9 +23,9 @@ export const ItemDetailContainer = () => {
     });
 
     useEffect( () => {
-        itemToDetailPromise.then( data => {
+        itemToDetailPromise.then( () => {
             setItem({
-                data: data,
+                data: getProductById(id),
                 loading: false
             });
         });

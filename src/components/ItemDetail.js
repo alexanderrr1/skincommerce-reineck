@@ -15,7 +15,7 @@ export const ItemDetail = ({ item }) => {
                 { !item.loading &&
                     <div className="col animate__animated animate__fadeIn">
                         <div className="card border-dark" style={cardStyle}>
-                            <img className="m-3" alt={item.data.description} src={`${process.env.PUBLIC_URL}${item.data.pictureURL}`}/>
+                            <img className="m-3" alt={item.data.description} src={`${process.env.PUBLIC_URL}${item.data.pictureUrl}`}/>
                             <div className="card-body">
                                 <h5 className="card-title">{ item.data.title }</h5>
                                 <p className="card-text">{ item.data.description }</p>

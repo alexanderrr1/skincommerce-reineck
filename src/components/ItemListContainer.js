@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { ItemList } from './ItemList';
 import { productList } from '../data/productList';
+import { useParams } from 'react-router-dom';
 
 
 const productListPromise = new Promise((resolve, reject) => {
@@ -11,6 +12,12 @@ const productListPromise = new Promise((resolve, reject) => {
 
 export const ItemListContainer = ({ greetings }) => {
     
+    const { category } = useParams();
+    
+    const getProductsByCategory = ( category ) => {
+        return productList.filter( product => product.category === category );
+    }
+
     const [productos, setProductos] = useState({
         data: [],
         loading: true
@@ -19,11 +26,11 @@ export const ItemListContainer = ({ greetings }) => {
     useEffect( () => {
         productListPromise.then( data => {
             setProductos({
-                data: data,
+                data: getProductsByCategory(category),
                 loading: false
             })
         })
-    }, []);
+    }, [productos]);
 
     return (
         <div className="m-3">

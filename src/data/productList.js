@@ -85,7 +85,7 @@ export const productList = [
         description: 'Wild Lily',
         price: 231080,
         pictureUrl: '/assets/images/mp9-wildlily.png',
-        category: 'SMG'
+        category: 'smg'
     },
     {
         id: '11',
@@ -93,7 +93,7 @@ export const productList = [
         description: 'Asterion',
         price: 115540,
         pictureUrl: '/assets/images/mp7-asterion.png',
-        category: 'SMG'
+        category: 'smg'
     },
     {
         id: '12',
@@ -101,7 +101,7 @@ export const productList = [
         description: 'Fallout Warning',
         price: 69322.84,
         pictureUrl: '/assets/images/ump45-falloutwarning.png',
-        category: 'SMG'
+        category: 'smg'
     },
     {
         id: '13',
@@ -109,7 +109,7 @@ export const productList = [
         description: 'Astral Jörmungandr',
         price: 231080,
         pictureUrl: '/assets/images/p90-astraljormungandr.png',
-        category: 'SMG'
+        category: 'smg'
     },
     {
         id: '14',
@@ -117,7 +117,7 @@ export const productList = [
         description: 'Osiris',
         price: 173310,
         pictureUrl: '/assets/images/ppbizon-osiris.png',
-        category: 'SMG'
+        category: 'smg'
     },
     {
         id: '15',
@@ -125,7 +125,7 @@ export const productList = [
         description: 'Lab Rats',
         price: 28885,
         pictureUrl: '/assets/images/mp5sd-labrats.png',
-        category: 'SMG'
+        category: 'smg'
     },
     {
         id: '16',
