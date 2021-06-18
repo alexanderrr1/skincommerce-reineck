@@ -11,12 +11,13 @@ const productListPromise = new Promise((resolve, reject) => {
 });
 
 export const ItemListContainer = ({ greetings }) => {
-    
     const { category } = useParams();
     
     const getProductsByCategory = ( category ) => {
         return productList.filter( product => product.category === category );
-    }
+    };
+
+    console.log(getProductsByCategory(category));
 
     const [productos, setProductos] = useState({
         data: [],
@@ -38,5 +39,4 @@ export const ItemListContainer = ({ greetings }) => {
             <ItemList productos = { productos } />
         </div>
     );
-
 }

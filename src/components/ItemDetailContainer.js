@@ -29,7 +29,7 @@ export const ItemDetailContainer = () => {
                 loading: false
             });
         });
-    }, []);
+    }, [item]);
 
     return (
         <div className="m-3 row justify-content-center">
