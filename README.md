@@ -27,9 +27,9 @@ Link al último commit de tu repositorio en Github + Gif mostrando la navegabili
 ## Además:
 
 Deberas corroborar que tu proyecto cuente con:
-    * Navbar con cart
-    * Catálogo
-    * Detalle de producto
+   * Navbar con cart
+   * Catálogo
+   * Detalle de producto
 
 ## Incluir
 
