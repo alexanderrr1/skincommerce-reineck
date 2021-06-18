@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const ItemDetail = ({ item }) => {
 
@@ -26,5 +26,5 @@ export const ItemDetail = ({ item }) => {
                 }
             </div>
         </div>
-    )
+    );
 }

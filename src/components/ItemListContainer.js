@@ -13,7 +13,7 @@ const productListPromise = new Promise((resolve, reject) => {
 export const ItemListContainer = ({ greetings }) => {
     
     const { category } = useParams();
-    
+
     const [productos, setProductos] = useState({
         data: [],
         loading: true
@@ -22,14 +22,18 @@ export const ItemListContainer = ({ greetings }) => {
     useEffect( () => {
 
         productListPromise.then( data => {
-
-            setProductos({
-                data: data.filter( product => product.category === category ),
-                loading: false
-            });
-
+            if( category === undefined ) {
+                setProductos({
+                    data: data,
+                    loading: false
+                })
+            } else {
+                setProductos({
+                    data: data.filter( product => product.category === category ),
+                    loading: false
+                });
+            }
         });
-
     }, [category]);
 
     return (
@@ -38,4 +42,5 @@ export const ItemListContainer = ({ greetings }) => {
             <ItemList productos = { productos } />
         </div>
     );
+    
 }

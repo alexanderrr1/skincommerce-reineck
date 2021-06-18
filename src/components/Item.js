@@ -1,10 +1,9 @@
 import React from 'react';
-import './Item.css'
+import './Item.css';
 
 export const Item = ({ id, title, description, price, pictureUrl}) => {
 
     return (
-
         <div className="col animate__animated animate__fadeIn">
             <div className="card border-dark myCard">
                 <img className="m-3" alt={description} src={`${process.env.PUBLIC_URL}${pictureUrl}`}/>
@@ -15,6 +14,7 @@ export const Item = ({ id, title, description, price, pictureUrl}) => {
                 </div>
             </div>
         </div>
-    )
+    );
+
 }
 

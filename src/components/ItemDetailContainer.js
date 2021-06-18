@@ -19,16 +19,12 @@ export const ItemDetailContainer = () => {
     });
 
     useEffect( () => {
-        
-        productListPromise.then( data => {
-                        
+        productListPromise.then( data => {              
             setItem({
                 data: data.find( product => product.id === parseInt(id) ),
                 loading: false
-            });
-            
-        });
-        
+            });   
+        });  
     }, [id]);
 
     return (

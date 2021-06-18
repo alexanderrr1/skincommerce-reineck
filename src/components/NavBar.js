@@ -12,7 +12,6 @@ export const NavBar = () => {
   }
 
   return(
-
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <NavLink className="navbar-brand" activeClassName="selected" style={logoStyle} exact to={"/"}>
@@ -38,7 +37,6 @@ export const NavBar = () => {
         </div>
       </div>
     </nav>
-
   );
-
+  
 }
