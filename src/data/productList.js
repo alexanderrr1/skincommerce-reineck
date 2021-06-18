@@ -1,6 +1,6 @@
 export const productList = [
     {
-        id: '0',
+        id: 0,
         title: 'USP-S',
         description: 'The Caiman',
         price: 127094,
@@ -8,7 +8,7 @@ export const productList = [
         category: 'pistol'
     },
     {
-        id: '1',
+        id: 1,
         title: 'Dual Berettas',
         description: 'Hemoglobin',
         price: 92432,
@@ -16,7 +16,7 @@ export const productList = [
         category: 'pistol'
     },
     {
-        id: '2',
+        id: 2,
         title: 'P250',
         description: 'Bone Mask',
         price: 115540,
@@ -24,7 +24,7 @@ export const productList = [
         category: 'pistol'
     },
     {
-        id: '3',
+        id: 3,
         title: 'CZ75-Auto',
         description: 'Tacticat',
         price: 1155400,
@@ -32,7 +32,7 @@ export const productList = [
         category: 'pistol'
     },
     {
-        id: '4',
+        id: 4,
         title: 'Desert Eagle',
         description: 'Urban DD Pat',
         price: 577584.46,
@@ -40,7 +40,7 @@ export const productList = [
         category: 'pistol'
     },
     {
-        id: '5',
+        id: 5,
         title: 'P2000',
         description: 'Amber Fade',
         price: 342576.10,
@@ -48,7 +48,7 @@ export const productList = [
         category: 'pistol'
     },
     {
-        id: '6',
+        id: 6,
         title: 'Five-Seven',
         description: 'Case Hardened',
         price: 11688.03,
@@ -56,7 +56,7 @@ export const productList = [
         category: 'pistol'
     },
     {
-        id: '7',
+        id: 7,
         title: 'Revolver R8',
         description: 'Amber Fade',
         price: 346620,
@@ -64,7 +64,7 @@ export const productList = [
         category: 'pistol'
     },
     {
-        id: '8',
+        id: 8,
         title: 'Glock 18',
         description: 'Fade',
         price: 231080,
@@ -72,7 +72,7 @@ export const productList = [
         category: 'pistol'
     },
     {
-        id: '9',
+        id: 9,
         title: 'Tec-9',
         description: 'Decimator',
         price: 11445,
@@ -80,7 +80,7 @@ export const productList = [
         category: 'pistol'
     },
     {
-        id: '10',
+        id: 10,
         title: 'MP9',
         description: 'Wild Lily',
         price: 231080,
@@ -88,7 +88,7 @@ export const productList = [
         category: 'smg'
     },
     {
-        id: '11',
+        id: 11,
         title: 'MP7',
         description: 'Asterion',
         price: 115540,
@@ -96,7 +96,7 @@ export const productList = [
         category: 'smg'
     },
     {
-        id: '12',
+        id: 12,
         title: 'UMP-45',
         description: 'Fallout Warning',
         price: 69322.84,
@@ -104,7 +104,7 @@ export const productList = [
         category: 'smg'
     },
     {
-        id: '13',
+        id: 13,
         title: 'P90',
         description: 'Astral Jörmungandr',
         price: 231080,
@@ -112,7 +112,7 @@ export const productList = [
         category: 'smg'
     },
     {
-        id: '14',
+        id: 14,
         title: 'PP-Bizon',
         description: 'Osiris',
         price: 173310,
@@ -120,7 +120,7 @@ export const productList = [
         category: 'smg'
     },
     {
-        id: '15',
+        id: 15,
         title: 'MP5-SD',
         description: 'Lab Rats',
         price: 28885,
@@ -128,7 +128,7 @@ export const productList = [
         category: 'smg'
     },
     {
-        id: '16',
+        id: 16,
         title: 'Galil AR',
         description: 'Sandstorm',
         price: 462160,
@@ -136,7 +136,7 @@ export const productList = [
         category: 'rifle'
     },
     {
-        id: '17',
+        id: 17,
         title: 'Famas',
         description: 'Cyanospatter',
         price: 141315.82,
@@ -144,7 +144,7 @@ export const productList = [
         category: 'rifle'
     },
     {
-        id: '18',
+        id: 18,
         title: 'AK-47',
         description: 'Asiimov',
         price: 12650,
@@ -152,7 +152,7 @@ export const productList = [
         category: 'rifle'
     },
     {
-        id: '19',
+        id: 19,
         title: 'M4A4',
         description: 'The Emperor',
         price: 11445,
@@ -160,7 +160,7 @@ export const productList = [
         category: 'rifle'
     },
     {
-        id: '20',
+        id: 20,
         title: 'SSG08',
         description: 'Dragonfire',
         price: 115540,
@@ -168,7 +168,7 @@ export const productList = [
         category: 'rifle'
     },
     {
-        id: '21',
+        id: 21,
         title: 'SG553',
         description: 'Hypnotic',
         price: 85498.44,
@@ -176,7 +176,7 @@ export const productList = [
         category: 'rifle'
     },
     {
-        id: '22',
+        id: 22,
         title: 'AUG',
         description: 'Akihabara Accept',
         price: 772962.60,
@@ -184,7 +184,7 @@ export const productList = [
         category: 'rifle'
     },
     {
-        id: '23',
+        id: 23,
         title: 'AWP',
         description: 'Oni Taiji',
         price: 11445,
@@ -192,7 +192,7 @@ export const productList = [
         category: 'rifle'
     },
     {
-        id: '24',
+        id: 24,
         title: 'G3SG1',
         description: 'Chronos',
         price: 69324,
@@ -200,7 +200,7 @@ export const productList = [
         category: 'rifle'
     },
     {
-        id: '25',
+        id: 25,
         title: 'Scar 20',
         description: 'Crimson Web',
         price: 173310,
@@ -208,7 +208,7 @@ export const productList = [
         category: 'rifle'
     },
     {
-        id: '26',
+        id: 26,
         title: 'Nova',
         description: 'Graphite',
         price: 231080,
@@ -216,7 +216,7 @@ export const productList = [
         category: 'heavy'
     },
     {
-        id: '27',
+        id: 27,
         title: 'XM1014',
         description: 'Ancient Lore',
         price: 1155284.46,
@@ -224,7 +224,7 @@ export const productList = [
         category: 'heavy'
     },
     {
-        id: '28',
+        id: 28,
         title: 'Sawe-Doff',
         description: 'Full Stop',
         price: 108407.72,
@@ -232,7 +232,7 @@ export const productList = [
         category: 'heavy'
     },
     {
-        id: '29',
+        id: 29,
         title: 'Mag-7',
         description: 'Cinquedea',
         price: 248411,
@@ -240,7 +240,7 @@ export const productList = [
         category: 'heavy'
     },
     {
-        id: '30',
+        id: 30,
         title: 'M249',
         description: 'Gatormesh',
         price: 86614.56,
@@ -248,7 +248,7 @@ export const productList = [
         category: 'heavy'
     },
     {
-        id: '31',
+        id: 31,
         title: 'Negev',
         description: 'Mjölnir',
         price: 288850,
@@ -256,7 +256,7 @@ export const productList = [
         category: 'heavy'
     },
     {
-        id: '32',
+        id: 32,
         title: 'Butterfly Knife',
         description: 'Doppler',
         price: 1074406.46,
@@ -264,7 +264,7 @@ export const productList = [
         category: 'knife'
     },
     {
-        id: '33',
+        id: 33,
         title: 'Karambit',
         description: 'Doppler',
         price: 2021950,
@@ -272,7 +272,7 @@ export const productList = [
         category: 'knife'
     },
     {
-        id: '34',
+        id: 34,
         title: 'M9 Bayonet',
         description: 'Doppler',
         price: 889658,

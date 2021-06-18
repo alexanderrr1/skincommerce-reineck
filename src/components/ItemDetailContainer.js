@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import { productList } from '../data/productList';
 import { ItemDetail } from './ItemDetail';
 
-const itemToDetailPromise = new Promise((resolve, reject) => {
+const productListPromise = new Promise((resolve, reject) => {
     setTimeout(function() {
-        resolve(productList);
+      resolve(productList);
     }, 2000);
 });
 
@@ -13,23 +13,23 @@ export const ItemDetailContainer = () => {
 
     const { id } = useParams();
 
-    const getProductById = ( id ) => {
-        return productList.find( product => product.id === id );
-    }
-
     const[item, setItem] = useState({
         data: {},
         loading: true
     });
 
     useEffect( () => {
-        itemToDetailPromise.then( () => {
+        
+        productListPromise.then( data => {
+                        
             setItem({
-                data: getProductById(id),
+                data: data.find( product => product.id === parseInt(id) ),
                 loading: false
             });
+            
         });
-    }, [item]);
+        
+    }, [id]);
 
     return (
         <div className="m-3 row justify-content-center">

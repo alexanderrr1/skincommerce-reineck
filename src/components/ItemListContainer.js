@@ -11,27 +11,26 @@ const productListPromise = new Promise((resolve, reject) => {
 });
 
 export const ItemListContainer = ({ greetings }) => {
+    
     const { category } = useParams();
     
-    const getProductsByCategory = ( category ) => {
-        return productList.filter( product => product.category === category );
-    };
-
-    console.log(getProductsByCategory(category));
-
     const [productos, setProductos] = useState({
         data: [],
         loading: true
     });
     
     useEffect( () => {
+
         productListPromise.then( data => {
+
             setProductos({
-                data: getProductsByCategory(category),
+                data: data.filter( product => product.category === category ),
                 loading: false
-            })
-        })
-    }, [productos]);
+            });
+
+        });
+
+    }, [category]);
 
     return (
         <div className="m-3">
