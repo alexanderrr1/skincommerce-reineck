@@ -106,7 +106,7 @@ export const productList = [
     {
         id: 13,
         title: 'P90',
-        description: 'Astral Jörmungandr',
+        description: 'Jörmungandr',
         price: 231080,
         pictureUrl: '/assets/images/p90-astraljormungandr.png',
         category: 'smg'
