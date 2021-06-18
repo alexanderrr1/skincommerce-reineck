@@ -43,4 +43,4 @@ En la Rúbrica de Evaluación (ubicada en la carpeta de la camada) encontrarás 
 
 La entrega intermedia no supone la realización de un archivo aparte o extra; marca que en este momento se hará una revisión más integral.
 
-![Farmers](demo/demo.gif)
+![](demo/preentrega1.gif)
