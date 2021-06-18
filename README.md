@@ -37,7 +37,7 @@ Deberas corroborar que tu proyecto cuente con:
 
 ## A tener en cuenta:
 
-En la Rúbrica de Evaluación (ubicada en la carpeta de la camada) encontrar'as un mayor detalle respecto a qué se tendrá en cuenta para la corrección.
+En la Rúbrica de Evaluación (ubicada en la carpeta de la camada) encontrarás un mayor detalle respecto a qué se tendrá en cuenta para la corrección.
 
 ## Importante:
 
