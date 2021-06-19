@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { ItemCount } from './ItemCount';
 
 export const ItemDetail = ({ item }) => {
 
     const cardStyle = {
         background: 'linear-gradient(to right bottom, #D9104D 5%, #ffffff 95%)'
+    }
+
+    const [amountToBuy, setAmountToBuy] = useState(0);
+
+    const onAdd = ( amount ) => {
+        setAmountToBuy( amount );
     }
 
     return (
@@ -21,6 +29,20 @@ export const ItemDetail = ({ item }) => {
                                 <p className="card-text">{ item.data.description }</p>
                                 <p className="card-text text-end text-muted">$ { item.data.price }</p>
                             </div>
+                            {amountToBuy === 0 && 
+                                <ItemCount 
+                                    stock = {10}
+                                    initial = {1}
+                                    onAdd = {onAdd}
+                                />
+                            }
+                            {amountToBuy !== 0 &&
+                                <div className="container">    
+                                    <div className="row">
+                                        <NavLink className="btn btn-outline-dark mb-2" exact to={'/cart'}>Terminar mi compra</NavLink>
+                                    </div>
+                                </div>
+                            }
                         </div>
                     </div>
                 }

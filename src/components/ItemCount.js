@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 
 export const ItemCount = ({stock, initial, onAdd}) => {
 
-    const styles = {
-        'backgroundColor': '#F4F4F4',
-        'borderRadius': '.25rem'
-    };
-
     const[ contador, setContador ] = useState(initial);
 
     const plusHandler = () => {
@@ -22,9 +17,9 @@ export const ItemCount = ({stock, initial, onAdd}) => {
     };
 
     return (
-        <div className="container col-xl-3" style={styles}>
+        <div className="container">
             <div className="row">
-                <label className="form-label mt-1">Item</label>
+                <label className="form-label mt-1 text-end">Stock Dispobible: {stock}</label>
             </div>
             <div className="row">
                 <div className="input-group mb-2">
