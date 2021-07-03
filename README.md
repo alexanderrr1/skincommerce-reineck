@@ -16,7 +16,7 @@ Link al último commit de tu repositorio en Github.
 * Al clickear comprar en ItemDetail se debe guardar en el CartContext.js el producto y su cantidad en forma de objeto { item: {}, quantity }
 * Detalle importante: CartContext debe tener la lógica incorporada de no aceptar duplicados y mantener su consistencia.
 * Métodos recomendados:
-**addItem(item, quantity) // Agregar cierta cantidad de un ítem al carrito.
-**removeItem(itemId) // Remover un item del cart por usando su id
-**clear() // Remover todos los items
-**isInCart: (id)=>true|false
+    *addItem(item, quantity) // Agregar cierta cantidad de un ítem al carrito.
+    *removeItem(itemId) // Remover un item del cart por usando su id
+    *clear() // Remover todos los items
+    *isInCart: (id)=>true|false
