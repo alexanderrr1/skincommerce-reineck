@@ -1,6 +1,6 @@
-# Desafío 7
+# Desafío 8
 
-Sincronizar Counter
+CartContext
 
 ## Formato
 
@@ -8,11 +8,15 @@ Link al último commit de tu repositorio en Github.
 
 ## Consigna
 
-* Importa el ItemCount.js del desafío Nº 4 en el counter ItemDetail.js y configura el evento de compra, siguiendo los detalles de manual.
+* Implementa React Context para mantener el estado de compra del user siguiendo los detalles del manual.}
 
 ## Aspectos a incluir en el entregable:
 
-* Debes lograr separar la responsabilidad del count, del detalle del ìtem, y esperar los eventos de agregado emitidos por el ItemCount.
-    * Cuando ItemCount emita un evento onAdd almacenarás ese valor en un estado interno del ItemDetail para hacer desaparecer el ItemCount.
-    * Cuando el estado interno de ItemDetail tenga la cantidad de ítems solicitados mostrar en su lugar un botón  que diga "Terminar mi compra".
-    * El botón de terminar mi cimpra debe poder navegar a un componente vacío por el momento en la ruta '/cart'.
+* CartContext.js con el contect y su custom provider (Impórtalo en App.js)
+* Al clickear comprar en ItemDetail se debe guardar en el CartContext.js el producto y su cantidad en forma de objeto { item: {}, quantity }
+* Detalle importante: CartContext debe tener la lógica incorporada de no aceptar duplicados y mantener su consistencia.
+* Métodos recomendados:
+**addItem(item, quantity) // Agregar cierta cantidad de un ítem al carrito.
+**removeItem(itemId) // Remover un item del cart por usando su id
+**clear() // Remover todos los items
+**isInCart: (id)=>true|false
