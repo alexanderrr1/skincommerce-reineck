@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import CartContext from '../context/CartContext';
 import { ItemCount } from './ItemCount';
 
 export const ItemDetail = ({ item }) => {
+
+    const { addItem } = useContext(CartContext);
 
     const cardStyle = {
         background: 'linear-gradient(to right bottom, #D9104D 5%, #ffffff 95%)'
@@ -39,7 +42,7 @@ export const ItemDetail = ({ item }) => {
                             {amountToBuy !== 0 &&
                                 <div className="container">    
                                     <div className="row">
-                                        <NavLink className="btn btn-outline-dark mb-2" exact to={'/cart'}>Terminar mi compra</NavLink>
+                                        <NavLink className="btn btn-outline-dark mb-2" exact to={'/cart'} onClick={() => addItem({item, amountToBuy})} >Terminar mi compra</NavLink>
                                     </div>
                                 </div>
                             }
