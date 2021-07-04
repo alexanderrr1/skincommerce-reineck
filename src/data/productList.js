@@ -35,7 +35,7 @@ export const productList = [
         id: 4,
         title: 'Desert Eagle',
         description: 'Urban DD Pat',
-        price: 577584.46,
+        price: 577584,
         pictureUrl: '/assets/images/deserteagle-urbanddpat.png',
         category: 'pistol'
     },
@@ -43,7 +43,7 @@ export const productList = [
         id: 5,
         title: 'P2000',
         description: 'Amber Fade',
-        price: 342576.10,
+        price: 342576,
         pictureUrl: '/assets/images/p2000-amberfade.png',
         category: 'pistol'
     },
@@ -51,7 +51,7 @@ export const productList = [
         id: 6,
         title: 'Five-Seven',
         description: 'Case Hardened',
-        price: 11688.03,
+        price: 11688,
         pictureUrl: '/assets/images/fiveseven-casehardened.png',
         category: 'pistol'
     },
@@ -99,7 +99,7 @@ export const productList = [
         id: 12,
         title: 'UMP-45',
         description: 'Fallout Warning',
-        price: 69322.84,
+        price: 69322,
         pictureUrl: '/assets/images/ump45-falloutwarning.png',
         category: 'smg'
     },
@@ -139,7 +139,7 @@ export const productList = [
         id: 17,
         title: 'Famas',
         description: 'Cyanospatter',
-        price: 141315.82,
+        price: 141315,
         pictureUrl: '/assets/images/famas-cyanospatter.png',
         category: 'rifle'
     },
@@ -171,7 +171,7 @@ export const productList = [
         id: 21,
         title: 'SG553',
         description: 'Hypnotic',
-        price: 85498.44,
+        price: 85498,
         pictureUrl: '/assets/images/sg553-hypnotic.png',
         category: 'rifle'
     },
@@ -179,7 +179,7 @@ export const productList = [
         id: 22,
         title: 'AUG',
         description: 'Akihabara Accept',
-        price: 772962.60,
+        price: 772962,
         pictureUrl: '/assets/images/aug-akihabaraaccept.png',
         category: 'rifle'
     },
@@ -219,7 +219,7 @@ export const productList = [
         id: 27,
         title: 'XM1014',
         description: 'Ancient Lore',
-        price: 1155284.46,
+        price: 1155284,
         pictureUrl: '/assets/images/xm1014-ancientlore.png',
         category: 'heavy'
     },
@@ -227,7 +227,7 @@ export const productList = [
         id: 28,
         title: 'Sawe-Doff',
         description: 'Full Stop',
-        price: 108407.72,
+        price: 108407,
         pictureUrl: '/assets/images/sawedoff-fullstop.png',
         category: 'heavy'
     },
@@ -243,7 +243,7 @@ export const productList = [
         id: 30,
         title: 'M249',
         description: 'Gatormesh',
-        price: 86614.56,
+        price: 86614,
         pictureUrl: '/assets/images/m249-gatormesh.png',
         category: 'heavy'
     },
@@ -259,7 +259,7 @@ export const productList = [
         id: 32,
         title: 'Butterfly Knife',
         description: 'Doppler',
-        price: 1074406.46,
+        price: 1074406,
         pictureUrl: '/assets/images/butterflyknife-doppler.png',
         category: 'knife'
     },

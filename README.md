@@ -1,6 +1,6 @@
-# Desafío 8
+# Desafío 9
 
-CartContext
+CartView
 
 ## Formato
 
@@ -8,15 +8,16 @@ Link al último commit de tu repositorio en Github.
 
 ## Consigna
 
-* Implementa React Context para mantener el estado de compra del user siguiendo los detalles del manual.}
+* Expande tu componente Cart.js con el desglose de la compra y actualiza tu CartWidget.js para hacerlo reactivo al contexto.
 
 ## Aspectos a incluir en el entregable:
 
-* CartContext.js con el contect y su custom provider (Impórtalo en App.js)
-* Al clickear comprar en ItemDetail se debe guardar en el CartContext.js el producto y su cantidad en forma de objeto { item: {}, quantity }
-* Detalle importante: CartContext debe tener la lógica incorporada de no aceptar duplicados y mantener su consistencia.
-* Métodos recomendados:
-    + addItem(item, quantity) // Agregar cierta cantidad de un ítem al carrito.
-    + removeItem(itemId) // Remover un item del cart por usando su id
-    + clear() // Remover todos los items
-    + isInCart: (id)=>true|false
+* Cart.js
+    + Debe mostrar el desglose de tu carrito y el precio total.
+    + Debe estar agregada la ruta 'cart' al BrowserRouter.
+    + Debe mostrar todos los ítems agregados agrupados.
+    + Por cada tipo de ítem incluye un control para eliminar ítems.
+    + De no haber ítems muestra un mensaje, de manera condicional, diciendo que no hay ítems y un react-router Link o un o un botón para que pueda volver al Landing (ItemDetailContainer.js) para buscar y comprar algo.
+* CartWidget.js
+    + Ahora debe consumir el CartContext y mostrar en tiempo real (aparte del ícono) qué cantidad de ítems están agregados (2 camisas y 1 gorro equivaldrían a 3 items).
+    + El cart widget no se debe mostrar más si no hay ítems en el carrito, aplicando la técnica que elijas (dismount, style, etc).
