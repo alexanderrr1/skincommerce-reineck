@@ -9,6 +9,8 @@ export const Cart = () => {
     return (
         <div className="m-3">
             <h1>CART</h1>
+            <button onClick={()=>clear()}>Quitar todos los elementos</button>
+            <button onClick={()=>console.log({cache})}>Consolear Cache</button>
         </div>
     )
 }
