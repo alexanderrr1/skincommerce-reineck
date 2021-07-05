@@ -16,14 +16,22 @@ export default function CacheProvider({ defaultValue = [] , children }) {
     
     function discountAmount(id){
         var unitPrice = cache.filter(x => x.item.data.id === id);
-        var amountToDiscount = unitPrice[0].item.data.price * unitPrice[0].amountToBuy
-        setCartTotalAmount(cartTotalAmount - amountToDiscount)
+        var amountToDiscount = unitPrice[0].item.data.price * unitPrice[0].amountToBuy;
+        setCartTotalAmount(cartTotalAmount - amountToDiscount);
     }
 
     function addItem(obj) {
         if(isInCart(obj.item.data)){
-            removeItem(obj.item.data.id);
-            setCache([...cache, obj]);
+            
+            var unitPrice = cache.filter(x => x.item.data.id === obj.item.data.id);
+            var amountToDiscount = unitPrice[0].item.data.price * unitPrice[0].amountToBuy;
+            var amountToIncrease = obj.item.data.price * obj.amountToBuy;
+            setCartTotalAmount(cartTotalAmount + amountToIncrease - amountToDiscount);
+
+            var newCache = cache.filter(x => x.item.data.id !== obj.item.data.id)
+            newCache.push(obj);
+            setCache(newCache);
+
             return;
         }
         var amountToIncrease = obj.item.data.price * obj.amountToBuy;
