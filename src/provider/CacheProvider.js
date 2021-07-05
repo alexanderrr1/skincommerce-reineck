@@ -22,7 +22,8 @@ export default function CacheProvider({ defaultValue = [] , children }) {
 
     function addItem(obj) {
         if(isInCart(obj.item.data)){
-            console.log("Elemento ya en carrito");
+            removeItem(obj.item.data.id);
+            setCache([...cache, obj]);
             return;
         }
         var amountToIncrease = obj.item.data.price * obj.amountToBuy;
