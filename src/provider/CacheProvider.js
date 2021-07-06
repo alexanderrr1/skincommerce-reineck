@@ -43,7 +43,7 @@ export default function CacheProvider({ defaultValue = [] , children }) {
     }
 
     function increaseQuantity( x, obj ){
-        if( x.item.data == obj.item.data ){
+        if( x.item.data === obj.item.data ){
             x.amountToBuy = x.amountToBuy + obj.amountToBuy;
         }
     }
