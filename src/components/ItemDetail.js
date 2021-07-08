@@ -15,6 +15,7 @@ export const ItemDetail = ({ item }) => {
 
     const onAdd = ( amount ) => {
         setAmountToBuy( amount );
+        addItem({item, amount})
     }
 
     return (
@@ -42,7 +43,7 @@ export const ItemDetail = ({ item }) => {
                             {amountToBuy !== 0 &&
                                 <div className="container">    
                                     <div className="row">
-                                        <NavLink className="btn btn-outline-dark mb-2" exact to={'/cart'} onClick={() => addItem({item, amountToBuy})} >Terminar mi compra</NavLink>
+                                        <NavLink className="btn btn-outline-dark mb-2" exact to={'/cart'}>Terminar mi compra</NavLink>
                                     </div>
                                 </div>
                             }

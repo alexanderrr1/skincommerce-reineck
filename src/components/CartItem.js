@@ -15,8 +15,8 @@ export const CartItem = ({item}) => {
                     <div className="card-body">
                     <h5 className="card-title">{ item.item.data.title }</h5>
                     <p className="card-text"><small className="text-muted">{ item.item.data.description }</small></p>
-                    <p className="card-text">Cantidad a comprar: { item.amountToBuy }, costo individual: $ { item.item.data.price }</p>
-                    <p className="card-text"><strong>Costo Total: ${ item.item.data.price * item.amountToBuy }</strong></p>
+                    <p className="card-text">Cantidad a comprar: { item.amount }, costo individual: $ { item.item.data.price }</p>
+                    <p className="card-text"><strong>Costo Total: ${ item.item.data.price * item.amount }</strong></p>
                     </div>
                 </div>
                 <div className="col-md-4">
