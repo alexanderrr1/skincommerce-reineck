@@ -1,23 +1,22 @@
 # Desafío 9
 
-CartView
+Item Collection
 
 ## Formato
 
 Link al último commit de tu repositorio en Github.
 
+## Pre-Requisitos
+
+* Es preferible que se tenga acceso a una cuenta de google antes de la clase (creando una nueva o usando la suya personal) para optimizar el tiempo del módulo.
+
 ## Consigna
 
-* Expande tu componente Cart.js con el desglose de la compra y actualiza tu CartWidget.js para hacerlo reactivo al contexto.
+* Conecta tu nueva ItemCollection de google Firestore a tu ItemListContainer y ItemDetailContainer
 
 ## Aspectos a incluir en el entregable:
 
-* Cart.js
-    + Debe mostrar el desglose de tu carrito y el precio total.
-    + Debe estar agregada la ruta 'cart' al BrowserRouter.
-    + Debe mostrar todos los ítems agregados agrupados.
-    + Por cada tipo de ítem incluye un control para eliminar ítems.
-    + De no haber ítems muestra un mensaje, de manera condicional, diciendo que no hay ítems y un react-router Link o un o un botón para que pueda volver al Landing (ItemDetailContainer.js) para buscar y comprar algo.
-* CartWidget.js
-    + Ahora debe consumir el CartContext y mostrar en tiempo real (aparte del ícono) qué cantidad de ítems están agregados (2 camisas y 1 gorro equivaldrían a 3 items).
-    + El cart widget no se debe mostrar más si no hay ítems en el carrito, aplicando la técnica que elijas (dismount, style, etc).
+* Conecta tu colección de firestore con el listado de ítems y con el detalle de ítem.
+* Elimina los async mocks (promises) y reemplazalos por los llamados de firestore.
+* Si navegas a /item/:id debe ocurrir una consulta de (1) documento.
+* Si navegas al catálogo debes consultar (N) documentos con un query filtrado, implementando la lógica de categorías y obteniendo el id de categoría del parámetro de react-router :categoryId
