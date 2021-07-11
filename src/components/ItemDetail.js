@@ -21,17 +21,13 @@ export const ItemDetail = ({ item }) => {
     return (
         <div className="row justify-content-center">
             <div className="m-3">
-                
-                { item.loading && <p>Loading...</p> }
-
-                { !item.loading &&
                     <div className="col animate__animated animate__fadeIn">
                         <div className="card border-dark" style={cardStyle}>
-                            <img className="m-3" alt={item.data.description} src={`${process.env.PUBLIC_URL}${item.data.pictureUrl}`}/>
+                            <img className="m-3" alt={ item.description } src={`${process.env.PUBLIC_URL}${ item.pictureUrl }`}/>
                             <div className="card-body">
-                                <h5 className="card-title">{ item.data.title }</h5>
-                                <p className="card-text">{ item.data.description }</p>
-                                <p className="card-text text-end text-muted">$ { item.data.price }</p>
+                                <h5 className="card-title">{ item.title }</h5>
+                                <p className="card-text">{ item.description }</p>
+                                <p className="card-text text-end text-muted">$ { item.price }</p>
                             </div>
                             {amountToBuy === 0 && 
                                 <ItemCount 
@@ -49,7 +45,6 @@ export const ItemDetail = ({ item }) => {
                             }
                         </div>
                     </div>
-                }
             </div>
         </div>
     );

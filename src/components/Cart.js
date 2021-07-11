@@ -30,7 +30,7 @@ export const Cart = () => {
                     <div>
                         {
                             cache.map( item =>
-                                <div key={item.item.data.id}>
+                                <div key={item.item.id}>
                                     <CartItem
                                         item = { item }
                                     />

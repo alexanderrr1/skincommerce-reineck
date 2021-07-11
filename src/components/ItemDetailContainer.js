@@ -1,37 +1,40 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import { productList } from '../data/productList';
+import { getFirestore } from '../firebase';
 import { ItemDetail } from './ItemDetail';
-
-const productListPromise = new Promise((resolve, reject) => {
-    setTimeout(function() {
-      resolve(productList);
-    }, 2000);
-});
 
 export const ItemDetailContainer = () => {
 
     const { id } = useParams();
 
-    const[item, setItem] = useState({
-        data: {},
-        loading: true
-    });
+    const [item, setItem] = useState({});
+    const [loading, setLoading] = useState();
 
-    useEffect( () => {
-        productListPromise.then( data => {              
-            setItem({
-                data: data.find( product => product.id === parseInt(id) ),
-                loading: false
-            });   
-        });  
-    }, [id]);
+    useEffect(() => {
+        setLoading(true);
+        const db = getFirestore();
+        const itemCollection = db.collection("items");
+        const itemById = itemCollection.where('id', '==', parseInt(id));
+        itemById.get().then((querySnapshot) => {
+            if(querySnapshot.size === 0){
+                console.log("No results!");
+            }
+            setItem(querySnapshot.docs.map(doc => doc.data())[0]);
+        }).catch((error) => {
+            console.log("Error searching items", error);
+        }).finally(() => {
+            setLoading(false);
+        })
+    }, [id])
 
     return (
         <div className="m-3 row justify-content-center">
             <div className="m-3 col-4 text-center">
                 <h1>Item Detail Container</h1>
-                <ItemDetail item = { item } />
+                { loading && <p>Loading...</p> }  
+                { !loading &&
+                    <ItemDetail item = { item } />
+                }
             </div>
         </div>
     );
