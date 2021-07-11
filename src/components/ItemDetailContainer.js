@@ -14,12 +14,13 @@ export const ItemDetailContainer = () => {
         setLoading(true);
         const db = getFirestore();
         const itemCollection = db.collection("items");
-        const itemById = itemCollection.where('id', '==', parseInt(id));
+        const itemById = itemCollection.doc(id);
+
         itemById.get().then((querySnapshot) => {
-            if(querySnapshot.size === 0){
+            if(Object.keys(querySnapshot).length === 0){
                 console.log("No results!");
             }
-            setItem(querySnapshot.docs.map(doc => doc.data())[0]);
+            setItem(querySnapshot.data());
         }).catch((error) => {
             console.log("Error searching items", error);
         }).finally(() => {

@@ -24,13 +24,18 @@ export const ItemListContainer = ({ greetings }) => {
             if(querySnapshot.size === 0){
                 console.log("No results!");
             }
-            setProductos(querySnapshot.docs.map(doc => doc.data()));
+            setProductos(querySnapshot.docs.map(doc => ({
+                data: doc.data(),
+                id: doc.id
+            })
+                
+            ));
         }).catch((error) => {
             console.log("Error searching items", error);
         }).finally(() => {
             setLoading(false);
         })
-    }, [category])
+    }, [category]);
 
     return (
         <div className="m-3">

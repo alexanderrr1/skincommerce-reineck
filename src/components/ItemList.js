@@ -14,10 +14,10 @@ export const ItemList = ({ productos, loading }) => {
                 productos.map(x => (
                     <NavLink className="" key = { x.id } exact to={`/item/${x.id}`}>
                         <Item
-                            title = { x.title }
-                            description = { x.description }
-                            price = { x.price }
-                            pictureUrl = { x.pictureUrl }
+                            title = { x.data.title }
+                            description = { x.data.description }
+                            price = { x.data.price }
+                            pictureUrl = { x.data.pictureUrl }
                         />
                     </NavLink>
                 ))
