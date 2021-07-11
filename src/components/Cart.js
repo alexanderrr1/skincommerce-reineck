@@ -40,6 +40,7 @@ export const Cart = () => {
                     </div>
                     <NavLink className="btn btn-primary main-color m-1" exact to={"/"}>Seguir Comprando</NavLink>
                     <button className="btn btn-primary main-color m-1" onClick={() => clear()}>Vaciar carrito</button>
+                    <NavLink className="btn btn-primary main-color m-1" exact to={"/finishOrder"}>Finalizar Compra</NavLink>
                 </div>
             }
 

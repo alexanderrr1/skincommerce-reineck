@@ -1,0 +1,10 @@
+.main-color {
+    background-color: #EE0E51 !important;
+    border-color: #EE0E51 !important;
+}
+
+.main-color:hover {
+    background-color: #fff !important;
+    border-color: #EE0E51 !important;
+    color: #EE0E51 !important;
+}

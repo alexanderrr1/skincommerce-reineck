@@ -5,6 +5,7 @@ import { ItemListContainer } from './components/ItemListContainer';
 import { NavBar } from './components/NavBar';
 import { Cart } from './components/Cart';
 import CacheProvider from './provider/CacheProvider';
+import { FinishOrder } from './components/FinishOrder';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route exact path="/cart">
                 <Cart />
+            </Route>
+            <Route exact path="/finishOrder">
+                <FinishOrder />
             </Route>
 
         </Switch>
