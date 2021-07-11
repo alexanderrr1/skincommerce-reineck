@@ -1,45 +1,44 @@
 import React, { useState, useEffect } from 'react'
 import { ItemList } from './ItemList';
-import { productList } from '../data/productList';
+import { getFirestore } from '../firebase';
 import { useParams } from 'react-router-dom';
 
-
-const productListPromise = new Promise((resolve, reject) => {
-    setTimeout(function() {
-      resolve(productList);
-    }, 2000);
-});
-
 export const ItemListContainer = ({ greetings }) => {
-    
+
     const { category } = useParams();
 
-    const [productos, setProductos] = useState({
-        data: [],
-        loading: true
-    });
+    const [loading, setLoading] = useState();
+    const [productos, setProductos] = useState([]);
     
-    useEffect( () => {
-
-        productListPromise.then( data => {
-            if( category === undefined ) {
-                setProductos({
-                    data: data,
-                    loading: false
-                })
-            } else {
-                setProductos({
-                    data: data.filter( product => product.category === category ),
-                    loading: false
-                });
+    useEffect(() => {
+        setLoading(true);
+        const db = getFirestore();
+        const itemCollection = db.collection("items");
+        let itemByCategory;
+        if(category === undefined) {
+            itemByCategory = itemCollection;
+        } else {
+            itemByCategory = itemCollection.where('category', '==', `${category}`);
+        }
+        itemByCategory.get().then((querySnapshot) => {
+            if(querySnapshot.size === 0){
+                console.log("No results!");
             }
-        });
-    }, [category]);
+            setProductos(querySnapshot.docs.map(doc => doc.data()));
+        }).catch((error) => {
+            console.log("Error searching items", error);
+        }).finally(() => {
+            setLoading(false);
+        })
+    }, [category])
 
     return (
         <div className="m-3">
             <h1>{ greetings }</h1>
-            <ItemList productos = { productos } />
+            <ItemList 
+                productos = { productos } 
+                loading = { loading } 
+                />
         </div>
     );
     
