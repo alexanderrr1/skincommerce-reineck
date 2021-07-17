@@ -1,16 +1,21 @@
-# Desafío 11
+# SkinCommerce
 
-Item Collection II
+Descripcion: Esta es una aplicación pensada para la venta de skins de CS:GO. Tiene la base de un e-commerce general, por lo que puede modificarse para el objetivo que usted desee.
 
-## Formato
+# Dependencias y versiones utilizadas:
 
-Link al último commit de tu repositorio en Github.
+* FontAwesome (1.2.35)
+* Firebase (8.0.2)
+* Bootstrap (5.0.1)
 
-## Consigna
+# Procedimiento ejecución.
 
-* Conecta Firestore a tu APP para escrituras
+Se debe clonar el repositorio y luego ejecutar sobre el directorio 
+`npm install`
 
-## Aspectos a incluir en el entregable:
+Una vez finalizada la instalación de las dependencias, sobre el mismo directorio ejecutamos
+`npm start`
 
-* Utiliza las operaciones de insercion para insertar tu orden en la coleccion y dale al user su id de orden auto-generada.
-* Crea los mappings para poder grabar un objeto del formato { buyer: {name, phone, email }, item: [{id, title, price}], date, total }
+La aplicación se ejecutará automáticamente sobre nuestro navegador por defecto en el puerto 3000.
+
+![](demo/skincommerce.gif)
